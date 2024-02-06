@@ -1,0 +1,161 @@
+<html>
+
+<head>
+
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<link rel="icon" href="/icon.jpg" type="image/jpg"/>
+<link rel="stylesheet" href="/style.css"/>
+
+</head>
+
+<body>
+
+<h1>Как это работает?</h1>
+
+<h1>Интерфейсы</h1>
+
+<p class="inf" lang="en">
+Реализации, стоящие за интерфейсами, это самостоятельные программы, логика которых рассмотрена в соответствующих метриках секции их анализа и сбора.
+cli: <span>omelet mysite.com</span>.
+Web api: <span>https://zxcvx.cc/packs/omelet/host?domain=mysite.com</span>
+</p>
+
+<h1>Анализ и сбор факторов ранжирования</h1>
+
+<p class="inf" lang="ru">
+Каждый параметр представляет собой столбцы в базе.
+Поскольку доступ к DNS записям осуществляется владельцами сайта для каждого параметра реализуется своя логика накопления информации о нем.
+Если же пользователь предоставляет доступ, указывая наш ключ в TXT записи, то возможно использование api популярных поисковиков.
+Также, в случае если пользователю потребуется сравнительный анализ, относительно других сайтов категории исходного, то потребуется плата от пользователя для доступа к данным траффика других ресурсов. 
+Дальнейший анализ происходит по этим извлеченным и затем загруженным данным.
+</p>
+
+<h2>Map</h2>
+
+<p class="inf" lang="ru"> Соответствие между категориями, тегами извлекаемых из контента целевого сайта и предполагаемыми запросами.
+</p>
+
+<h3>Ключевые слова</h3>
+
+<h3>Семантическая связь</h3>
+
+<h2>Ссылочный профиль</h2>
+
+<h3>Возраст ссылок</h3>
+
+<p class="inf" lang="ru">
+Возраст ссылок, ссылающихся на оцениваемый ресурс.
+</p>
+
+<h3>Авторитетность сслающегося сайта</h3>
+
+<p class="inf" lang="ru">
+Наша система считает сайты авторитетными, если они включены в список 50 наиболее посещаемых сайтов от "similarweb".
+</p>
+
+<h3>Тип ссылающегося сайта</h3>
+
+<p class="inf" lang="ru">
+Тип сайта, с которого ссылаются на оцениваемый ресурс.
+</p>
+
+<h2>Хост</h2>
+
+<h3>Web server: 40x/50x responses</h3>
+
+<h3>Возраст документа и последнее обновление</h3>
+
+<h3>Возраст сайта (домена)</h3>
+
+<p class="inf" lang="ru">
+Probably by some kind of whois lib could be done.
+</p>
+
+<h2>Verified only</h2>
+
+<h3>Местоположения пользователей</h3>
+
+<h3>Проверка конфигурации сервера</h3>
+
+<h2>Paid only</h2>
+
+<h3>Поведение пользователей на сайте</h3>
+
+<h3>Платный VS Органический трафик</h3>
+
+<h1>Специфика отдельных поисковых систем</h1>
+
+<p class="inf" lang="ru">
+Собранные нами параметры, хранятся не только в соответствии со строками домен/файл базы данных, но и имеют "условный вес" в поле значения для отделно взятых поисковых систем.
+Это способствует созданию более точных рекомендаций относительно поисковых систем, которые можно рассматривать в данном случае как особый вид метрики.
+</p>
+
+<p class="inf" lang="ru">
+Bing features:
+</p>
+<ul>
+<li>Instant view: allows preview top web sites from response</li>
+<li>Semantic analysis: interpreting of content</li>
+<li>AI chat bot: return complete, ready-to-use answer generated from top web sites.</li>
+</ul>
+
+<p class="inf" lang="ru">
+For example for query so "How to use whois as a library on linux?" we get three web sites:
+geeksforgeeks.org,  howtogeek.com, superuser.com 
+</p>
+
+<p class="zxc">
+Domain Name: geeksforgeeks.org
+Creation Date: 2009-03-19T06:08:55Z
+
+Domain Name: HOWTOGEEK.COM
+Creation Date: 2006-09-11T11:09:57Z
+
+Domain Name: SUPERUSER.COM
+Creation Date: 1995-11-01T05:00:00Z
+</p>
+
+<p class="inf">
+Check for keywords:
+https://www.geeksforgeeks.org/how-to-use-the-whois-command-on-ubuntu-linux/
+https://www.howtogeek.com/680086/how-to-use-the-whois-command-on-linux/
+https://superuser.com/questions/1155349/where-does-the-whois-command-get-its-information-from
+</p>
+
+<p class="inf">
+So we get: semantics class of words for first: 3/5(+1), for second: 3/5, 2/5. (+1) is happen to be most popular, so it precede.
+</p>
+
+<table class="conf-table">
+<thead>
+<tr>
+	<th></th>
+	<th>Keywords</th>
+	<th>Semantics</th>
+	<th>Age of referencing link</th>
+	<th>Domain age</th>
+</thead>
+<tbody>
+<tr>
+	<td>Bing</td>
+	<td>3</td>
+	<td>2</td>
+	<td></td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>Google</td>
+	<td></td>
+</tr>
+<tr>
+	<td>Yandex</td>
+	<td></td>
+</tr>
+</tbody>
+</table>
+
+</body>
+
+</html>
