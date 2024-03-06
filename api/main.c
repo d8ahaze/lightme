@@ -200,9 +200,9 @@ int callback_diff(
 		free(dom);
 		printf("Error: %s\n", strerror(errno));
 		json_object_set(json_obj, key, json_string(regar));
-		// printf("regar freeing\n");
-		// free(regar);
-		// printf("Error: %s\n", strerror(errno));
+		printf("regar freeing\n");
+		free(regar);
+		printf("Error: %s\n", strerror(errno));
 		++i;
 	}
 	printf("keys_arr freeing\n");
